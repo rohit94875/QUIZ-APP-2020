@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="home">HOME</string>
+    <string name="subs">SUBS</string>
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="profile">PROFILE</string>
 </resources>
