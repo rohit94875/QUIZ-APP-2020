@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.coviam.quizapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ProfileActivity"></activity>
+        <activity android:name=".activity.DummyActivity"></activity>
+        <activity android:name=".activity.ContestResults" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.LeaderboardActivity" />
         <activity android:name=".activity.SubscribedActivity" />
         <activity android:name=".activity.ContestActivity" />
         <activity android:name=".activity.SplashScreen" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.QuizActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
