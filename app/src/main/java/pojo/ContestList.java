@@ -2,10 +2,7 @@ package pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
-import java.util.List;
-
-public class ContestList implements Serializable {
+public class ContestList {
 
     @SerializedName("contestName")
     private String contestName;
@@ -27,6 +24,9 @@ public class ContestList implements Serializable {
 
     @SerializedName("noOfSkipsAllowed")
     private String noOfSkipsAllowed;
+
+    @SerializedName("userId")
+    private String userId;
 
     public String getContestName() {
         return contestName;
@@ -82,5 +82,13 @@ public class ContestList implements Serializable {
 
     public void setNoOfSkipsAllowed(String noOfSkipsAllowed) {
         this.noOfSkipsAllowed = noOfSkipsAllowed;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

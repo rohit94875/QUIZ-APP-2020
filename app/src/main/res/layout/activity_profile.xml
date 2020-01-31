@@ -5,7 +5,8 @@
     android:id="@+id/constraintProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ProfileActivity">
+    tools:context=".activity.ProfileActivity"
+    android:background="#EE4438">
 
     <TextView
         android:id="@+id/textView4"
@@ -42,7 +43,7 @@
         android:gravity="center"
         android:layout_height="wrap_content"
         android:text="@string/easy"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/easyAns"
@@ -57,7 +58,7 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/med"
-        android:textColor="#000000"
+        android:textColor="#99681F"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/difficult"
@@ -72,7 +73,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/diff"
-        android:textColor="#000000"
+        android:textColor="#B60202"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -92,7 +93,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="#069C0C"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +108,7 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text=""
-        android:textColor="#000000"
+        android:textColor="#99681F"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/diffAns"
@@ -121,7 +122,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text=""
-        android:textColor="#000000"
+        android:textColor="#B60202"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -140,7 +141,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.003"
+        android:indeterminate="true"
+        android:indeterminateTint="#ffffff"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -153,7 +156,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_navigation"
-        app:labelVisibilityMode="selected"
+        app:labelVisibilityMode="labeled"
+        android:background="#FFFFFF"
         />
 
     <TextView

@@ -3,6 +3,7 @@ package adaptor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,10 +39,11 @@ public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.textView1.setText(myContestList.get(position).getContestName());
         holder.textView2.setText("Total questions :" + myContestList.get(position).getNoOfQuestions());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contestDetails.onClick(myContestList.get(position).getContestName());
+                contestDetails.onClick(myContestList.get(position),myContestList.get(position).getContestId());
+
             }
         });
     }
@@ -55,18 +57,20 @@ public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textView1;
         public TextView textView2;
+        public Button button;
         public ConstraintLayout constraintLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.textView1 = itemView.findViewById(R.id.contestName);
             this.textView2 = itemView.findViewById(R.id.questions);
+            this.button = itemView.findViewById(R.id.subscribe);
             constraintLayout = itemView.findViewById(R.id.constraintContest);
         }
     }
 
     public interface ContestDetails
     {
-        void onClick(String contestDetails);
+        void onClick(ContestList pos,String contestId);
     }
 }

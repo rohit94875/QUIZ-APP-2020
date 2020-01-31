@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements CategoryAdaptor.C
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        layoutManager=new LinearLayoutManager(this);
+        layoutManager=new GridLayoutManager(this,2);
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(layoutManager);
         loadbar=findViewById(R.id.progressBar);

@@ -15,7 +15,7 @@
 11-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:7:5-29:19
+13-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:7:5-33:19
 14        android:allowBackup="true"
 14-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -34,79 +34,86 @@
 22-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:13:9-40
 23        android:usesCleartextTraffic="true" >
 23-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:14:9-44
-24        <activity android:name="com.coviam.quizapp.activity.RegisterActivity" />
-24-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:15:9-72
-24-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:15:19-60
-25        <activity android:name="com.coviam.quizapp.activity.LoginActivity" />
-25-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:16:9-60
-25-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:16:19-57
-26        <activity android:name="com.coviam.quizapp.activity.ProfileActivity" />
-26-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:17:9-62
-26-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:17:19-59
-27        <activity android:name="com.coviam.quizapp.activity.LeaderboardActivity" />
-27-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:18:9-66
-27-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:18:19-63
-28        <activity android:name="com.coviam.quizapp.activity.SubscribedActivity" />
-28-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:19:9-65
-28-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:19:19-62
-29        <activity android:name="com.coviam.quizapp.activity.ContestActivity" />
-29-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:20:9-62
-29-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:20:19-59
-30        <activity android:name="com.coviam.quizapp.activity.SplashScreen" />
-30-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:21:9-59
-30-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:21:19-56
-31        <activity android:name="com.coviam.quizapp.activity.MainActivity" >
-31-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:22:9-28:20
-31-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:22:19-56
-32            <intent-filter>
-32-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:23:13-27:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:17-69
-33-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:17-77
-35-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity
-38-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
-39            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-39-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
-40            android:excludeFromRecents="true"
-40-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
-41            android:exported="false"
-41-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
-42            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-42-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
-43        <!--
-44            Service handling Google Sign-In user revocation. For apps that do not integrate with
-45            Google Sign-In, this service will never be started.
-46        -->
-47        <service
-47-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
-48            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-48-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
-49            android:exported="true"
-49-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
-50            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-50-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
-51
-52        <activity
-52-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-53            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-53-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-54            android:exported="false"
-54-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-55            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-55-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-56
-57        <meta-data
-57-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-58            android:name="com.google.android.gms.version"
-58-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-59            android:value="@integer/google_play_services_version" />
-59-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-60    </application>
-61
-62</manifest>
+24        <meta-data
+24-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:15:9-17:59
+25            android:name="com.google.android.actions"
+25-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:16:13-54
+26            android:resource="@drawable/rounded_button" />
+26-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:17:13-56
+27
+28        <activity android:name="com.coviam.quizapp.activity.RegisterActivity" />
+28-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:19:9-63
+28-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:19:19-60
+29        <activity android:name="com.coviam.quizapp.activity.LoginActivity" />
+29-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:20:9-60
+29-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:20:19-57
+30        <activity android:name="com.coviam.quizapp.activity.ProfileActivity" />
+30-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:21:9-62
+30-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:21:19-59
+31        <activity android:name="com.coviam.quizapp.activity.LeaderboardActivity" />
+31-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:22:9-66
+31-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:22:19-63
+32        <activity android:name="com.coviam.quizapp.activity.SubscribedActivity" />
+32-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:23:9-65
+32-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:23:19-62
+33        <activity android:name="com.coviam.quizapp.activity.ContestActivity" />
+33-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:9-62
+33-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:19-59
+34        <activity android:name="com.coviam.quizapp.activity.SplashScreen" />
+34-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:25:9-59
+34-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:25:19-56
+35        <activity android:name="com.coviam.quizapp.activity.MainActivity" >
+35-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:9-32:20
+35-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:19-56
+36            <intent-filter>
+36-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:27:13-31:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:28:17-69
+37-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:28:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:30:17-77
+39-->/Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:30:27-74
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+43            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+43-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+44            android:excludeFromRecents="true"
+44-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+45            android:exported="false"
+45-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+46            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+46-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+47        <!--
+48            Service handling Google Sign-In user revocation. For apps that do not integrate with
+49            Google Sign-In, this service will never be started.
+50        -->
+51        <service
+51-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+52            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+52-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+53            android:exported="true"
+53-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+54            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+54-->[com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+55
+56        <activity
+56-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+57            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+57-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+58            android:exported="false"
+58-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+59            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+59-->[com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+60
+61        <meta-data
+61-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+62            android:name="com.google.android.gms.version"
+62-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+63            android:value="@integer/google_play_services_version" />
+63-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+64    </application>
+65
+66</manifest>

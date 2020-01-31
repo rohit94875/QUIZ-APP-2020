@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LeaderboardActivity">
+    tools:context=".activity.LeaderboardActivity"
+    android:background="#CCCBCB">
 
     <TextView
         android:id="@+id/textView3"
@@ -34,6 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_navigation"
-        app:labelVisibilityMode="selected"
+        app:labelVisibilityMode="labeled"
+        android:background="#FFFFFF"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

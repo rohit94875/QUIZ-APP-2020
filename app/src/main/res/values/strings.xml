@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QuizApp</string>
     <string name="home">HOME</string>
-    <string name="subs">MY SUBSCRIPTIONS</string>
+    <string name="subs">SUBSCRIPTIONS</string>
     <string name="leaderboard">LEADERBOARD</string>
     <string name="profile">PROFILE</string>
     <string name="select_category">Select your favourite category</string>
@@ -13,8 +13,8 @@
     <string name="total">Total points earned</string>
     <string name="questions">Questions answered</string>
     <string name="next">more points for next medal</string>
-    <string name="username">Enter Username</string>
-    <string name="password">Enter Password</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
     <string name="signIn">Sign in</string>
     <string name="newUser">New User? Register here</string>
     <string name="edittext">New User Registration</string>
@@ -22,4 +22,5 @@
     <string name="editemail">Enter Email</string>
     <string name="editpass">Enter Password</string>
     <string name="register">Register</string>
+    <string name="dynamic">Show Dynamic Contests</string>
 </resources>

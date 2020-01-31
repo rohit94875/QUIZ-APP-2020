@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#EE4438">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        card_view:cardBackgroundColor="#7CBEF3"
+        card_view:cardBackgroundColor="#F8F8FA"
         card_view:cardCornerRadius="16dp"
         card_view:cardElevation="8dp"
         card_view:cardUseCompatPadding="true">
@@ -37,12 +39,16 @@
                 android:weightSum="1">
 
                 <Button
+                    android:id="@+id/subscribe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
-                    android:padding="16dp"
-                    android:text="subscribe now" />
+                    android:padding="8dp"
+                    android:text="subscribe"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/card"
+                    android:background="@drawable/rounded_button"/>
 
                 <TextView
                     android:id="@+id/questions"
@@ -51,6 +57,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:textAllCaps="true"
+                    android:layout_margin="8dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
