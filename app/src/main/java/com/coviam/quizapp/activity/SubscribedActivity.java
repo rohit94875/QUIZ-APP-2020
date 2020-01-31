@@ -19,7 +19,6 @@ import com.coviam.quizapp.adaptor.SubscribedAdaptor;
 import com.coviam.quizapp.api.APIInterface;
 import com.coviam.quizapp.api.App2;
 import com.coviam.quizapp.pojo.SubscribedResponse;
-import com.coviam.quizapp.pojo.UserRequest;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -98,7 +97,7 @@ public class SubscribedActivity extends AppCompatActivity implements SubscribedA
     @Override
     public void onClick(String contestId,String contestName) {
 
-        Intent intent=new Intent(SubscribedActivity.this,QuizActivity.class);
+        Intent intent=new Intent(SubscribedActivity.this, StaticQuizActivity.class);
         intent.putExtra("contestId",contestId);
         intent.putExtra("contestName",contestName);
         startActivity(intent);

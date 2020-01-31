@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.DummyActivity"></activity>
+        <activity android:name=".activity.AdActivity"></activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.DummyActivity" />
         <activity android:name=".activity.ContestResults" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.ProfileActivity" />
@@ -19,7 +26,7 @@
         <activity android:name=".activity.SubscribedActivity" />
         <activity android:name=".activity.ContestActivity" />
         <activity android:name=".activity.SplashScreen" />
-        <activity android:name=".activity.QuizActivity">
+        <activity android:name=".activity.StaticQuizActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

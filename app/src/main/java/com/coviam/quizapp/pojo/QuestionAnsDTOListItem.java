@@ -9,7 +9,7 @@ public class QuestionAnsDTOListItem implements Serializable {
 	@SerializedName("questionId")
 	private String questionId;
 
-	@SerializedName("answer")
+	@SerializedName("submittedAns")
 	private String answer;
 
 	@SerializedName("timetaken")

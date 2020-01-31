@@ -6,19 +6,19 @@ import com.google.gson.annotations.SerializedName;
 
 public class AnswerDTO implements Serializable{
 
-	@SerializedName("questionAnsDTOList")
+	@SerializedName("staticContesQuestionsAndAnswersDTO")
 	private List<QuestionAnsDTOListItem> questionAnsDTOList;
 
 	@SerializedName("contestId")
 	private String contestId;
 
-	@SerializedName("noOfskips")
+	@SerializedName("noOfSkips")
 	private int noOfskips;
 
 	@SerializedName("starting")
 	private int starting;
 
-	@SerializedName("userID")
+	@SerializedName("userId")
 	private String userID;
 
 	public void setQuestionAnsDTOList(List<QuestionAnsDTOListItem> questionAnsDTOList){
