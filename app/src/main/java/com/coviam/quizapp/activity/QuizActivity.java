@@ -11,6 +11,7 @@ import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import com.coviam.quizapp.api.App2;
 import com.coviam.quizapp.pojo.QuestionAnsDTOListItem;
 import com.coviam.quizapp.pojo.QuestionDTO;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -58,7 +60,6 @@ public class QuizActivity extends AppCompatActivity {
     long timeLeftInMillis;
     int counter=0;
     int skipLimit=3;
-    Button save;
     int skipStart=0;
     ImageButton refresh;
     List<QuestionAnsDTOListItem> ansDTOListItems;
@@ -76,23 +77,41 @@ public class QuizActivity extends AppCompatActivity {
         questionDTOS=new ArrayList<QuestionDTO>();
         ansDTOListItems=new ArrayList<QuestionAnsDTOListItem>();
 
+        checkA.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    answer.setText(answer.getText().toString()+"A");
+                }
+            }
+        });
+
+        checkB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    answer.setText(answer.getText().toString()+"B");
+                }
+            }
+        });
+
+        checkC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    answer.setText(answer.getText().toString()+"C");
+                }
+            }
+        });
+
 
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                answer.setText("");
-                save.setVisibility(View.VISIBLE);
-                next.setVisibility(View.GONE);
+                resetValues();
             }
         });
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Check(v);
-                save.setVisibility(View.GONE);
-                next.setVisibility(View.VISIBLE);
-            }
-        });
+
 
         //intent.getStringExtra("contestId")
         apiInterface.getQuestions().enqueue(new Callback<List<QuestionDTO>>() {
@@ -114,7 +133,7 @@ public class QuizActivity extends AppCompatActivity {
                         skipStart++;
                         if(skipStart<=skipLimit) {
                             QuestionAnsDTOListItem questionAnsDTOListItem=new QuestionAnsDTOListItem();
-                            questionAnsDTOListItem.setTimetaken(timeLeftInMillis);
+                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS-timeLeftInMillis);
                             ansDTOListItems.add(questionAnsDTOListItem);
                             counter++;
                             showNextQuestion();
@@ -130,7 +149,7 @@ public class QuizActivity extends AppCompatActivity {
                         //save answer in answer dto
                         QuestionAnsDTOListItem questionAnsDTOListItem=new QuestionAnsDTOListItem();
                         questionAnsDTOListItem.setAnswer(answer.getText().toString());
-                        questionAnsDTOListItem.setTimetaken(timeLeftInMillis);
+                        questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS-timeLeftInMillis);
                         questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
                         ansDTOListItems.add(questionAnsDTOListItem);
                         counter++;
@@ -154,11 +173,16 @@ public class QuizActivity extends AppCompatActivity {
             QuestionDTO questionDTO=questionDTOS.get(counter);
             qusetionName.setText(questionDTO.getQuestionText());
             setValues(questionDTO);
+            resetValues();
+            timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+            countDownTimer.cancel();
+            startCountDown();
         }
         else{
             //api call to send answer
             Intent intent=new Intent(QuizActivity.this,DummyActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
@@ -179,7 +203,6 @@ public class QuizActivity extends AppCompatActivity {
         checkB=findViewById(R.id.checkBoxB);
         checkC=findViewById(R.id.checkBoxC);
         refresh=findViewById(R.id.refresh);
-        save=findViewById(R.id.save);
 
     }
 
@@ -196,9 +219,19 @@ public class QuizActivity extends AppCompatActivity {
                 timeLeftInMillis = 0;
                 updateCountDownText();
                 QuestionAnsDTOListItem questionAnsDTOListItem=new QuestionAnsDTOListItem();
-                questionAnsDTOListItem.setTimetaken(timeLeftInMillis);
+                questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS-timeLeftInMillis);
+                questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
                 ansDTOListItems.add(questionAnsDTOListItem);
-                showNextQuestion();
+                if(counter<numberOfQuestions) {
+                    counter++;
+                    showNextQuestion();
+                }
+                else{
+                    Intent intent=new Intent(QuizActivity.this,DummyActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         }.start();
     }
@@ -264,21 +297,17 @@ public class QuizActivity extends AppCompatActivity {
 
 
     }
-    public void Check(View v)
-    {
-
+    void resetValues(){
         if(checkA.isChecked()){
-            String value=answer.getText().toString()+"A";
-            answer.setText(value);
+            checkA.setChecked(false);
         }
         if(checkB.isChecked()){
-            String value=answer.getText().toString()+"A";
-            answer.setText(value);
+            checkB.setChecked(false);
         }
         if(checkC.isChecked()){
-            String value=answer.getText().toString()+"A";
-            answer.setText(value);
+            checkC.setChecked(false);
         }
+        answer.setText("");
     }
 
 

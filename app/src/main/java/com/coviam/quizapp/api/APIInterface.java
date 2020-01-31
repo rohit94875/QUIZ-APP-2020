@@ -28,8 +28,7 @@ public interface APIInterface {
     Call<List<QuestionDTO>> getQuestions(@Path("contestId") String contestId);
 
      */
-
-    @GET("/bins/rk66a")
+    @GET("/bins/1fgczu")
     Call<List<QuestionDTO>> getQuestions();
 
 
