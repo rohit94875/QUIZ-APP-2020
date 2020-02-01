@@ -16,7 +16,7 @@ import com.coviam.quizapp.R;
 import api.API;
 import api.APIInterface;
 import okhttp3.ResponseBody;
-import pojo.Login;
+import com.coviam.quizapp.pojo.Login;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("userName",user);
         editor.putString("password",pass);
+        editor.putBoolean("flag",true);
         editor.commit();
         editor.apply();
 
@@ -62,6 +63,8 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,"Registration Failed",Toast.LENGTH_SHORT).show();
                     }
                 });
+                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 

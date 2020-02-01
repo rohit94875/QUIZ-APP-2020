@@ -13,7 +13,7 @@ import com.coviam.quizapp.R;
 
 import java.util.List;
 
-import pojo.Category;
+import com.coviam.quizapp.pojo.Category;
 
 public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHolder>{
 

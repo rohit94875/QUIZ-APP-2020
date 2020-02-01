@@ -1,11 +1,8 @@
-package pojo;
+package com.coviam.quizapp.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Register {
-
-    @SerializedName("name")
-    private String userName;
+public class Login {
 
     @SerializedName("email")
     private String email;
@@ -13,8 +10,7 @@ public class Register {
     @SerializedName("password")
     private String password;
 
-    public Register(String userName, String email, String password) {
-        this.userName = userName;
+    public Login(String email, String password) {
         this.email = email;
         this.password = password;
     }

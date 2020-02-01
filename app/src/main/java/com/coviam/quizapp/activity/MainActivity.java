@@ -3,14 +3,12 @@ package com.coviam.quizapp.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -22,8 +20,8 @@ import java.util.List;
 import adaptor.CategoryAdaptor;
 import api.API;
 import api.APIInterface;
-import okhttp3.ResponseBody;
-import pojo.Category;
+
+import com.coviam.quizapp.pojo.Category;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

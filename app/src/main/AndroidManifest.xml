@@ -22,8 +22,9 @@
         <activity android:name=".activity.LeaderboardActivity" />
         <activity android:name=".activity.SubscribedActivity" />
         <activity android:name=".activity.ContestActivity" />
-        <activity android:name=".activity.SplashScreen" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.ContestResults"/>
+        <activity android:name=".activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

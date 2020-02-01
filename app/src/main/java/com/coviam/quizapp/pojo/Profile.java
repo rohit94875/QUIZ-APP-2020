@@ -1,4 +1,4 @@
-package pojo;
+package com.coviam.quizapp.pojo;
 
 import com.google.gson.annotations.SerializedName;
 

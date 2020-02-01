@@ -14,7 +14,7 @@ import com.coviam.quizapp.R;
 
 import java.util.List;
 
-import pojo.ContestList;
+import com.coviam.quizapp.pojo.ContestList;
 
 public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.ViewHolder>{
     List<ContestList> myContestList;

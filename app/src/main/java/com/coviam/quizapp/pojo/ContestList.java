@@ -1,4 +1,4 @@
-package pojo;
+package com.coviam.quizapp.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -27,6 +27,17 @@ public class ContestList {
 
     @SerializedName("userId")
     private String userId;
+
+    @SerializedName("isCompleted")
+    private Boolean isComlpeted;
+
+    public Boolean getComlpeted() {
+        return isComlpeted;
+    }
+
+    public void setComlpeted(Boolean comlpeted) {
+        isComlpeted = comlpeted;
+    }
 
     public String getContestName() {
         return contestName;

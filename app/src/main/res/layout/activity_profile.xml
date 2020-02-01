@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ProfileActivity"
-    android:background="#EE4438">
+    android:background="#E46036">
 
     <TextView
         android:id="@+id/textView4"
@@ -45,7 +45,7 @@
         android:text="@string/easy"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
         app:layout_constraintEnd_toStartOf="@+id/easyAns"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -58,9 +58,9 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/med"
-        android:textColor="#99681F"
+        android:textColor="#ffffff"
         android:textSize="20sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toTopOf="@+id/difficult"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,9 +73,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/diff"
-        android:textColor="#B60202"
+        android:textColor="#ffffff"
         android:textSize="20sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
-        android:textColor="#069C0C"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +108,7 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text=""
-        android:textColor="#99681F"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/diffAns"
@@ -122,7 +122,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text=""
-        android:textColor="#B60202"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"

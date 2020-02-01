@@ -2,7 +2,6 @@ package com.coviam.quizapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,8 +25,8 @@ import adaptor.ContestListAdaptor;
 import api.API;
 import api.APIInterface;
 import okhttp3.ResponseBody;
-import pojo.ContestList;
-import pojo.Login;
+import com.coviam.quizapp.pojo.ContestList;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -63,6 +62,11 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
             public void onResponse(Call<List<ContestList>> call, Response<List<ContestList>> response) {
                 loadbar.setVisibility(View.GONE);
                 list = response.body();
+//                for(int i=0;i<list.size();i++){
+//                    if(list.get(i).getComlpeted()){
+//                        list.remove(i);
+//                    }
+//                }
                 contestListAdaptor=new ContestListAdaptor(list,ContestActivity.this);
                 recyclerView.setAdapter(contestListAdaptor);
             }
@@ -83,7 +87,6 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
                     @Override
                     public void onResponse(Call<List<ContestList>> call, Response<List<ContestList>> response) {
                         loadbar.setVisibility(View.GONE);
-                        subscribe.setVisibility(View.GONE);
                         list = response.body();
 
                         if(response.body()==null)
@@ -141,18 +144,18 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
         String userId=sharedPreferences.getString("userName",null);
 
         String contestType="static";
-        Call<ResponseBody> call=apiInterface.postSubscribed(contestId,userId,contestType);
+        Call<ResponseBody> call=apiInterface.postSubscribed(contestId,"1",contestType);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Toast.makeText(ContestActivity.this,"Subscription successful",Toast.LENGTH_SHORT).show();
-                try {
-                    wait(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                list.remove(pos);
-                contestListAdaptor.notifyDataSetChanged();
+//                try {
+//                    wait(2000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                list.remove(pos);
+//                contestListAdaptor.notifyDataSetChanged();
             }
 
             @Override

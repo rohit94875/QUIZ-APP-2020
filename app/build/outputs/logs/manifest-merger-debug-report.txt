@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
 MERGED from [com.google.android.material:material:1.2.0-alpha03] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2014148b24e65696114617c9c8baf138/material-1.2.0-alpha03/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:17:1-39:12
@@ -12,10 +12,16 @@ MERGED from [androidx.cardview:cardview:1.0.0] /Users/chappidisaibharath/.gradle
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/056634285937b2535ff256884ac7cf86/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a53596bdd308807993a20732db231575/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/8e47ec3003e8792857d03486c4761d40/jetified-glide-4.8.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2cd50160f6260a0aee2042ad6ca92acf/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a98b89c2e1ff00fc7a67147dd265da1f/play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0c7d342bdf24c02db5aa8cf9a618d57d/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2b8a3547a6423f6fb15f19a78415dd89/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a29562c9b7134a32c0d7323c7a2b5ccf/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2d8cbe787b4f57432c371fd63ba1c890/jetified-play-services-stats-16.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0362ff4d8672321347a402c32368f192/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/ddf6a25e6e3e5e2af441269b48288beb/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -40,29 +46,31 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/chappidisaibhar
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/733fc1d306cee2c05d3e1fb0b7527020/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/c2e7196fa5a9fc8ea47e5226a4dff583/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
-		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
-		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:7:5-33:19
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:7:5-34:19
 MERGED from [com.google.android.material:material:1.2.0-alpha03] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2014148b24e65696114617c9c8baf138/material-1.2.0-alpha03/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha03] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2014148b24e65696114617c9c8baf138/material-1.2.0-alpha03/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:22:5-37:19
@@ -71,10 +79,22 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/chappidisa
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/8e47ec3003e8792857d03486c4761d40/jetified-glide-4.8.0/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/8e47ec3003e8792857d03486c4761d40/jetified-glide-4.8.0/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0c7d342bdf24c02db5aa8cf9a618d57d/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0c7d342bdf24c02db5aa8cf9a618d57d/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:9:5-15:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2b8a3547a6423f6fb15f19a78415dd89/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2b8a3547a6423f6fb15f19a78415dd89/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a29562c9b7134a32c0d7323c7a2b5ccf/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a29562c9b7134a32c0d7323c7a2b5ccf/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2d8cbe787b4f57432c371fd63ba1c890/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2d8cbe787b4f57432c371fd63ba1c890/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:5-89
@@ -129,24 +149,28 @@ activity#com.coviam.quizapp.activity.ContestActivity
 ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:9-62
 	android:name
 		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:24:19-59
-activity#com.coviam.quizapp.activity.SplashScreen
+activity#com.coviam.quizapp.activity.MainActivity
 ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:25:9-59
 	android:name
 		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:25:19-56
-activity#com.coviam.quizapp.activity.MainActivity
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:9-32:20
+activity#com.coviam.quizapp.activity.ContestResults
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:9-60
 	android:name
-		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:19-56
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:26:19-58
+activity#com.coviam.quizapp.activity.SplashScreen
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:27:9-33:20
+	android:name
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:27:19-56
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml:31:27-74
 uses-sdk
 INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/chappidisaibharath/Documents/GitHub/QUIZ-APP-2020/app/src/main/AndroidManifest.xml
@@ -167,14 +191,26 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/chappidisaibharath
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a53596bdd308807993a20732db231575/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/8e47ec3003e8792857d03486c4761d40/jetified-glide-4.8.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/8e47ec3003e8792857d03486c4761d40/jetified-glide-4.8.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2cd50160f6260a0aee2042ad6ca92acf/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2cd50160f6260a0aee2042ad6ca92acf/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a98b89c2e1ff00fc7a67147dd265da1f/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a98b89c2e1ff00fc7a67147dd265da1f/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0c7d342bdf24c02db5aa8cf9a618d57d/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0c7d342bdf24c02db5aa8cf9a618d57d/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2b8a3547a6423f6fb15f19a78415dd89/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2b8a3547a6423f6fb15f19a78415dd89/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a29562c9b7134a32c0d7323c7a2b5ccf/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/a29562c9b7134a32c0d7323c7a2b5ccf/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2d8cbe787b4f57432c371fd63ba1c890/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/2d8cbe787b4f57432c371fd63ba1c890/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0362ff4d8672321347a402c32368f192/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -251,6 +287,72 @@ ADDED from [com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisai
 		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7c3357205c0d6443051a58acd987f14a/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:28:9-34:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:29:13-82
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:31:13-33:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:31:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:32:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/053a2220516bb5dd640507e2625e2009/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:32:25-75
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:22:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:24:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:26:22-79
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:25-78
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/7ba449c427a547bb945749c928d35da7/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:25-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 	android:exported
@@ -259,6 +361,16 @@ ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisai
 		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:10:9-14:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:13:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:14:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/0d13f58eb888758e8fcb21cd899e151a/jetified-firebase-common-16.0.3/AndroidManifest.xml:11:13-77
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/chappidisaibharath/.gradle/caches/transforms-2/files-2.1/4b67754f40f49578e2471e3d39fb68d2/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 	android:value

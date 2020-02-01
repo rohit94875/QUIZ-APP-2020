@@ -2,7 +2,6 @@ package com.coviam.quizapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,14 +14,11 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.coviam.quizapp.R;
-import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.List;
 
 import api.API;
 import api.APIInterface;
-import pojo.Profile;
+import com.coviam.quizapp.pojo.Profile;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

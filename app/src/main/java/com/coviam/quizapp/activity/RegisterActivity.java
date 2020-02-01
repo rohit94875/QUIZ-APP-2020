@@ -2,6 +2,7 @@ package com.coviam.quizapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import com.coviam.quizapp.R;
 import api.API;
 import api.APIInterface;
 import okhttp3.ResponseBody;
-import pojo.Register;
+import com.coviam.quizapp.pojo.Register;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -45,6 +46,8 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         Toast.makeText(RegisterActivity.this,"Registration Success",Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(getBaseContext(),LoginActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override
@@ -54,6 +57,5 @@ public class RegisterActivity extends AppCompatActivity {
                 });
             }
         });
-
     }
 }

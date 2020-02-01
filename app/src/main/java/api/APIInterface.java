@@ -3,11 +3,11 @@ package api;
 import java.util.List;
 
 import okhttp3.ResponseBody;
-import pojo.Category;
-import pojo.ContestList;
-import pojo.Login;
-import pojo.Profile;
-import pojo.Register;
+import com.coviam.quizapp.pojo.Category;
+import com.coviam.quizapp.pojo.ContestList;
+import com.coviam.quizapp.pojo.Login;
+import com.coviam.quizapp.pojo.Profile;
+import com.coviam.quizapp.pojo.Register;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -22,8 +22,9 @@ public interface APIInterface {
     @GET("/contest/getStaticContestsByCategory/{categoryId}")
     Call<List<ContestList>> getContests(@Path("categoryId") String categoryId);
 
-    @GET("/contest/getDynamicContestsByCategory/{categoryId}")
+    @GET("/contest/getDynmicContestByCategory/{categoryId}")
     Call<List<ContestList>> getDynamicContests(@Path("categoryId") String categoryId);
+
 
     @GET("")
     Call<Profile> getPoints();
@@ -34,6 +35,6 @@ public interface APIInterface {
     @POST("")
     Call<ResponseBody> postRegistrationDetails(@Body Register register);
 
-    @POST("/subscribeUser/{contestId}/{userId}/{contestType}")
+    @POST("/contest/registerUser/{contestId}/{userId}/{contestType}")
     Call<ResponseBody> postSubscribed(@Path("contestId") String contestId,@Path("userId") String userId,@Path("contestType") String contestType);
 }
