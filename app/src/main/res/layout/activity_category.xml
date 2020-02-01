@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:background="#E46036">
+    android:background="#5DAACC">
 
 
     <androidx.cardview.widget.CardView

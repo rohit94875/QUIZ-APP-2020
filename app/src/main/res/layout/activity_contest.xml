@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ContestActivity"
-    android:background="#E46036">
+    android:background="#5DAACC">
 
     <ProgressBar
         android:id="@+id/progressBar"
