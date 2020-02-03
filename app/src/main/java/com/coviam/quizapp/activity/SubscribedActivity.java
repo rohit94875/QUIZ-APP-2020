@@ -34,6 +34,7 @@ public class SubscribedActivity extends AppCompatActivity implements SubscribedA
     RecyclerView.LayoutManager layoutManager;
     ProgressBar loadbar;
     BottomNavigationView bottomNavigationView;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +47,11 @@ public class SubscribedActivity extends AppCompatActivity implements SubscribedA
         recyclerView.setLayoutManager(layoutManager);
 
         //getting userId from shared Preferences
-        SharedPreferences sharedPreferences=getSharedPreferences("userAccess", Context.MODE_PRIVATE);
+        sharedPreferences=getSharedPreferences("MyPref", Context.MODE_PRIVATE);
 
         //api call
         APIInterface apiInterface=App2.getClient().create(APIInterface.class);
-        apiInterface.getSubscribedContent("1").enqueue(new Callback<List<SubscribedResponse>>() {
+        apiInterface.getSubscribedContent(String.valueOf(sharedPreferences.getInt("userId",0))).enqueue(new Callback<List<SubscribedResponse>>() {
             @Override
             public void onResponse(Call<List<SubscribedResponse>> call, Response<List<SubscribedResponse>> response) {
                 loadbar.setVisibility(View.GONE);

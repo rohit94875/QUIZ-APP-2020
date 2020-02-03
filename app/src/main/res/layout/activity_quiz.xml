@@ -35,7 +35,7 @@
 
 
     <TextView
-        android:id="@+id/contentName"
+        android:id="@+id/contestName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -276,7 +276,6 @@
         android:layout_height="0dp"
         android:gravity="center|left"
         android:text="TextView"
-        android:textAllCaps="true"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         android:textStyle="italic"

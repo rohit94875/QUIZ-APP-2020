@@ -20,7 +20,7 @@ import com.google.firebase.iid.InstanceIdResult;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN_TIME_OUT=1000;
+    private static int SPLASH_SCREEN_TIME_OUT=2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class SplashScreen extends AppCompatActivity {
                         }
                         else
                             {
-                            Toast.makeText(SplashScreen.this,"Token generated",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SplashScreen.this,"Token NOT generated",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

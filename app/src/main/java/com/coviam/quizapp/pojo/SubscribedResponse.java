@@ -12,6 +12,7 @@ public class SubscribedResponse implements Serializable {
 	@SerializedName("contestName")
 	private String contestName;
 
+
 	public void setContestId(String contestId){
 		this.contestId = contestId;
 	}

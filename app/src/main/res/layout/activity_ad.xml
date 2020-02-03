@@ -23,10 +23,24 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/back"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
     </ImageView>
+
+    <TextView
+        android:id="@+id/adText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image">
+
+    </TextView>
 
     <Button
         android:id="@+id/back"

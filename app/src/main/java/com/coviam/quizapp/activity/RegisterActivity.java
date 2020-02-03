@@ -14,6 +14,8 @@ import com.coviam.quizapp.R;
 import api.API;
 import api.APIInterface;
 import okhttp3.ResponseBody;
+
+import com.coviam.quizapp.api.App6;
 import com.coviam.quizapp.pojo.Register;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,26 +23,31 @@ import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    TextView userName=findViewById(R.id.editname);
-    TextView emailId=findViewById(R.id.editemail);
-    TextView password=findViewById(R.id.editpass);
-    Button registration=findViewById(R.id.register);
+    TextView userName;
+    TextView emailId;
+    TextView password;
+    Button registration;
     APIInterface apiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        String user=userName.getText().toString();
-        String email=emailId.getText().toString();
-        String pass=password.getText().toString();
-
-        final Register register=new Register(user,email,pass);
+         userName=findViewById(R.id.editname);
+         emailId=findViewById(R.id.editemail);
+         password=findViewById(R.id.editpass);
+         registration=findViewById(R.id.register);
 
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                apiInterface= API.getClient().create(APIInterface.class);
+
+                String user=userName.getText().toString();
+                String email=emailId.getText().toString();
+                String pass=password.getText().toString();
+
+                final Register register=new Register(user,email,pass);
+                apiInterface= App6.getClient().create(APIInterface.class);
                 Call<ResponseBody> call=apiInterface.postRegistrationDetails(register);
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override

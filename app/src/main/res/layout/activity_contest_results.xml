@@ -44,7 +44,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="8dp"
-        android:text="adsa"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"

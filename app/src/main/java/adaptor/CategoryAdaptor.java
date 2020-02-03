@@ -41,7 +41,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categoryDetails.onClick(myCategory.get(position).getId());
+                categoryDetails.onClick(myCategory.get(position).getId(),myCategory.get(position).getName());
             }
         });
 
@@ -65,6 +65,6 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
 
     public interface CategoryDetails
     {
-        void onClick(String categoryId);
+        void onClick(String categoryId,String categoryName);
     }
 }

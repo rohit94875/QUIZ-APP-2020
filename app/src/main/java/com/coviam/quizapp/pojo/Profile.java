@@ -4,16 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class Profile {
 
-    @SerializedName("userName")
+    @SerializedName("userId")
     private String userName;
 
-    @SerializedName("easyAns")
+    @SerializedName("easy")
     private String easyAns;
 
-    @SerializedName("medAns")
+    @SerializedName("medium")
     private String medAns;
 
-    @SerializedName("diffAns")
+    @SerializedName("difficult")
     private String diffAns;
 
     @SerializedName("points")

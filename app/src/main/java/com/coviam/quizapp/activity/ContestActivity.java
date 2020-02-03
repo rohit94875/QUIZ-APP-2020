@@ -17,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coviam.quizapp.R;
+import com.coviam.quizapp.api.App7;
+import com.coviam.quizapp.pojo.Analytics;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -42,6 +44,7 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
     TextView dynamic;
     Button subscribe;
     List<ContestList> list;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,7 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
         loadbar=findViewById(R.id.progressBar);
 
         apiInterface= API.getClient().create(APIInterface.class);
-        final Intent intent=getIntent();
+        intent=getIntent();
 
         Call<List<ContestList>> call=apiInterface.getContests(intent.getStringExtra("category_id"));
         call.enqueue(new Callback<List<ContestList>>() {
@@ -78,34 +81,34 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
             }
         });
 
-        dynamic=findViewById(R.id.dynamicContest);
-        dynamic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Call<List<ContestList>> callDynamic=apiInterface.getDynamicContests(intent.getStringExtra("category_id"));
-                callDynamic.enqueue(new Callback<List<ContestList>>() {
-                    @Override
-                    public void onResponse(Call<List<ContestList>> call, Response<List<ContestList>> response) {
-                        loadbar.setVisibility(View.GONE);
-                        list = response.body();
-
-                        if(response.body()==null)
-                            Toast.makeText(ContestActivity.this,"No dynamic contests available",Toast.LENGTH_SHORT).show();
-                        else
-                            {
-                            contestListAdaptor = new ContestListAdaptor(list, ContestActivity.this);
-                            recyclerView.setAdapter(contestListAdaptor);
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<List<ContestList>> call, Throwable t) {
-                        loadbar.setVisibility(View.GONE);
-                        Toast.makeText(ContestActivity.this,"try harder",Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
+//        dynamic=findViewById(R.id.dynamicContest);
+//        dynamic.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Call<List<ContestList>> callDynamic=apiInterface.getDynamicContests(intent.getStringExtra("category_id"));
+//                callDynamic.enqueue(new Callback<List<ContestList>>() {
+//                    @Override
+//                    public void onResponse(Call<List<ContestList>> call, Response<List<ContestList>> response) {
+//                        loadbar.setVisibility(View.GONE);
+//                        list = response.body();
+//
+//                        if(response.body()==null)
+//                            Toast.makeText(ContestActivity.this,"No dynamic contests available",Toast.LENGTH_SHORT).show();
+//                        else
+//                            {
+//                            contestListAdaptor = new ContestListAdaptor(list, ContestActivity.this);
+//                            recyclerView.setAdapter(contestListAdaptor);
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<List<ContestList>> call, Throwable t) {
+//                        loadbar.setVisibility(View.GONE);
+//                        Toast.makeText(ContestActivity.this,"try harder",Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//            }
+//        });
 
         bottomNavigationView =findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -140,22 +143,33 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
     @Override
     public void onClick(final ContestList pos,String contestId) {
 
-        SharedPreferences sharedPreferences=getSharedPreferences("MyPref", Context.MODE_PRIVATE);
-        String userId=sharedPreferences.getString("userName",null);
+        final SharedPreferences sharedPreferences=getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        String userId=String.valueOf(sharedPreferences.getInt("userId",0));
 
         String contestType="static";
-        Call<ResponseBody> call=apiInterface.postSubscribed(contestId,"1",contestType);
+        Call<ResponseBody> call=apiInterface.postSubscribed(contestId,userId,contestType);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Toast.makeText(ContestActivity.this,"Subscription successful",Toast.LENGTH_SHORT).show();
-//                try {
-//                    wait(2000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                list.remove(pos);
-//                contestListAdaptor.notifyDataSetChanged();
+                apiInterface= App7.getClient().create(APIInterface.class);
+                Analytics analytics=new Analytics();
+                analytics.setAction("subscribe");
+                analytics.setUserId(String.valueOf(sharedPreferences.getInt("userId",0)));
+                analytics.setTagName(intent.getStringExtra("category_name"));
+                Call<ResponseBody> callAnalytics=apiInterface.analytics(analytics);
+                callAnalytics.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        Toast.makeText(ContestActivity.this,"Analytics success",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Toast.makeText(ContestActivity.this,"Analytics failed",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
             }
 
             @Override

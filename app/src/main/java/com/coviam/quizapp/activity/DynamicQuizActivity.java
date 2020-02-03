@@ -258,7 +258,7 @@ public class DynamicQuizActivity extends AppCompatActivity {
 
     void views(){
         loadbar=findViewById(R.id.progressBar);
-        contestName=findViewById(R.id.contentName);
+        contestName=findViewById(R.id.contestName);
         qusetionName=findViewById(R.id.questionName);
         questionImage=findViewById(R.id.questionImage);
         questionView=findViewById(R.id.questionVideo);

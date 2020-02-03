@@ -93,9 +93,10 @@ public class MainActivity extends AppCompatActivity implements CategoryAdaptor.C
     }
 
     @Override
-    public void onClick(final String categoryId) {
+    public void onClick(final String categoryId,String categoryName) {
         Intent intent=new Intent(getBaseContext(),ContestActivity.class);
         intent.putExtra("category_id",categoryId);
+        intent.putExtra("category_name",categoryName);
         startActivity(intent);
     }
 }
