@@ -38,7 +38,9 @@ public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.textView1.setText(myContestList.get(position).getContestName());
-        holder.textView2.setText("Total questions :" + myContestList.get(position).getNoOfQuestions());
+        holder.textView2.setText("questions :" + myContestList.get(position).getNoOfQuestions());
+        holder.textView3.setText("skips allowed : "+myContestList.get(position).getNoOfSkipsAllowed());
+        holder.textView4.setText("end time : "+myContestList.get(position).getContestTimeLimit());
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +59,8 @@ public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textView1;
         public TextView textView2;
+        public TextView textView3;
+        public TextView textView4;
         public Button button;
         public ConstraintLayout constraintLayout;
 
@@ -64,6 +68,8 @@ public class ContestListAdaptor extends RecyclerView.Adapter<ContestListAdaptor.
             super(itemView);
             this.textView1 = itemView.findViewById(R.id.contestName);
             this.textView2 = itemView.findViewById(R.id.questions);
+            this.textView3 = itemView.findViewById(R.id.skips);
+            this.textView4 = itemView.findViewById(R.id.endtime);
             this.button = itemView.findViewById(R.id.subscribe);
             constraintLayout = itemView.findViewById(R.id.constraintContest);
         }

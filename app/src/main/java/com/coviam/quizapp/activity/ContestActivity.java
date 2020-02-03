@@ -152,6 +152,7 @@ public class ContestActivity extends AppCompatActivity implements ContestListAda
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Toast.makeText(ContestActivity.this,"Subscription successful",Toast.LENGTH_SHORT).show();
+                subscribe.setText("Already Subscribed");
                 apiInterface= App7.getClient().create(APIInterface.class);
                 Analytics analytics=new Analytics();
                 analytics.setAction("subscribe");
