@@ -5,7 +5,8 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ContestResults">
+    tools:context=".activity.ContestResults"
+    android:background="#5DAACC">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -43,7 +44,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="8dp"
-        android:text="adsa"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
@@ -90,20 +90,21 @@
                 android:layout_height="match_parent"
                 android:text="YOUR POSITION IS"
                 android:textSize="24dp"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:gravity="center">
 
             </TextView>
             <TextView
+                android:id="@+id/value"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center|left"
                 android:text="2"
                 android:textSize="24dp"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:padding="8dp"
                 android:textStyle="bold"></TextView>
         </LinearLayout>

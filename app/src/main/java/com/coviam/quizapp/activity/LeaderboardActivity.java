@@ -46,12 +46,13 @@ public class LeaderboardActivity extends AppCompatActivity implements Leaderboar
         loadbar=findViewById(R.id.progressBar);
 
         //getting userId
-        SharedPreferences sharedPreferences=getSharedPreferences("userAccess", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences=getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        String uid=String.valueOf(sharedPreferences.getInt("userId",0));
 
 
 
         APIInterface apiInterface= App2.getClient().create(APIInterface.class);
-        apiInterface.getSubscribedContent(sharedPreferences.getString("userId",null)).enqueue(new Callback<List<SubscribedResponse>>() {
+        apiInterface.getleaderboard(uid).enqueue(new Callback<List<SubscribedResponse>>() {
             @Override
             public void onResponse(Call<List<SubscribedResponse>> call, Response<List<SubscribedResponse>> response) {
                 loadbar.setVisibility(View.GONE);

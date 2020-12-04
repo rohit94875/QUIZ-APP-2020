@@ -112,7 +112,7 @@ public class DynamicQuizActivity extends AppCompatActivity {
 
 
         //intent.getStringExtra("contestId")
-        apiInterface.getQuestions().enqueue(new Callback<List<QuestionDTO>>() {
+        apiInterface.getQuestions(intent.getStringExtra("contestId")).enqueue(new Callback<List<QuestionDTO>>() {
             @Override
             public void onResponse(final Call<List<QuestionDTO>> call, Response<List<QuestionDTO>> response) {
 
@@ -258,7 +258,7 @@ public class DynamicQuizActivity extends AppCompatActivity {
 
     void views(){
         loadbar=findViewById(R.id.progressBar);
-        contestName=findViewById(R.id.contentName);
+        contestName=findViewById(R.id.contestName);
         qusetionName=findViewById(R.id.questionName);
         questionImage=findViewById(R.id.questionImage);
         questionView=findViewById(R.id.questionVideo);

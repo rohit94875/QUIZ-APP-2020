@@ -16,11 +16,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/contentName"
+                android:id="@+id/contestName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="dsasd"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textAllCaps="true"
                 android:textSize="25sp"
                 android:layout_gravity="center"
@@ -33,7 +33,7 @@
                 android:layout_gravity="center"
                 android:textColor="#ffffff"
                 android:background="@drawable/button_rounded"
-                android:text="start"/>
+                android:text="view"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

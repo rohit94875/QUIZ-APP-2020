@@ -1,6 +1,5 @@
 package com.coviam.quizapp.adaptor;
 
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,7 +56,7 @@ public class SubscribedAdaptor extends RecyclerView.Adapter<SubscribedAdaptor.Vi
         Button start;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            contextName=itemView.findViewById(R.id.contentName);
+            contextName=itemView.findViewById(R.id.contestName);
             start=itemView.findViewById(R.id.startContent);
         }
     }

@@ -58,7 +58,7 @@ public class LeaderboardAdaptor extends RecyclerView.Adapter<LeaderboardAdaptor.
         Button showLeaderboard;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            contestName=itemView.findViewById(R.id.contentName);
+            contestName=itemView.findViewById(R.id.contestName);
             showLeaderboard=itemView.findViewById(R.id.startContent);
         }
     }

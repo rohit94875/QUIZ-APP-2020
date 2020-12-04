@@ -32,7 +32,7 @@ public class ContestResultsAdaptor extends RecyclerView.Adapter<ContestResultsAd
 
     @Override
     public void onBindViewHolder(@NonNull ContestResultsAdaptor.ViewHolder holder, int position) {
-        holder.counter.setText(position+1);
+        holder.counter.setText(String.valueOf(position+1));
         holder.userName.setText(list.get(position).getUserName());
         holder.userPoints.setText(String.valueOf(list.get(position).getPoints()));
 

@@ -11,7 +11,7 @@ public class App2 {
         OkHttpClient client = new OkHttpClient.Builder().build();
 
         retrofit=new Retrofit.Builder()
-                .baseUrl("https://api.myjson.com")
+                .baseUrl("http://172.16.20.131:8087")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

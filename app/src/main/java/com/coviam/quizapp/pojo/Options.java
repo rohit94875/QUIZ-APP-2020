@@ -6,16 +6,16 @@ import java.io.Serializable;
 
 public class Options implements Serializable {
 
-	@SerializedName("a")
+	@SerializedName("optionA")
 	private String A;
 
-	@SerializedName("b")
+	@SerializedName("optionB")
 	private String B;
 
-	@SerializedName("c")
+	@SerializedName("optionC")
 	private String C;
 
-	@SerializedName("d")
+	@SerializedName("optionD")
 	private String D;
 
 	public String getD() { return D; }

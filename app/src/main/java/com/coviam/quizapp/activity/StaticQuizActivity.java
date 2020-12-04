@@ -2,7 +2,9 @@ package com.coviam.quizapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -22,6 +24,10 @@ import com.bumptech.glide.Glide;
 import com.coviam.quizapp.R;
 import com.coviam.quizapp.api.APIInterface;
 import com.coviam.quizapp.api.App2;
+import com.coviam.quizapp.api.App4;
+import com.coviam.quizapp.api.App5;
+import com.coviam.quizapp.api.App7;
+import com.coviam.quizapp.pojo.Analytics;
 import com.coviam.quizapp.pojo.AnswerDTO;
 import com.coviam.quizapp.pojo.QuestionAnsDTOListItem;
 import com.coviam.quizapp.pojo.QuestionDTO;
@@ -30,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,6 +61,7 @@ public class StaticQuizActivity extends AppCompatActivity {
     CheckBox checkC;
     TextView textViewCountDown;
     int numberOfQuestions;
+    int correctAnswers;
     CountDownTimer countDownTimer;
     long timeLeftInMillis;
     int counter=0;
@@ -61,6 +69,8 @@ public class StaticQuizActivity extends AppCompatActivity {
     int skipStart=0;
     ImageButton refresh;
     Intent intent;
+    SharedPreferences sharedPreferences;
+
     List<QuestionAnsDTOListItem> ansDTOListItems;
 
 
@@ -70,6 +80,7 @@ public class StaticQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         intent=getIntent();
+        sharedPreferences=getSharedPreferences("MyPref", Context.MODE_PRIVATE);
         views();
         contestName.setText(intent.getStringExtra("contestName"));
         final APIInterface apiInterface= App2.getClient().create(APIInterface.class);
@@ -112,8 +123,8 @@ public class StaticQuizActivity extends AppCompatActivity {
         });
 
 
-        //intent.getStringExtra("contestId")
-        apiInterface.getQuestions().enqueue(new Callback<List<QuestionDTO>>() {
+        intent.getStringExtra("contestId");
+        apiInterface.getQuestions(intent.getStringExtra("contestId")).enqueue(new Callback<List<QuestionDTO>>() {
             @Override
             public void onResponse(final Call<List<QuestionDTO>> call, Response<List<QuestionDTO>> response) {
 
@@ -123,37 +134,39 @@ public class StaticQuizActivity extends AppCompatActivity {
                 questionDTOS=response.body();
 
                 // set
+                correctAnswers=0;
                 numberOfQuestions = questionDTOS.size();
                 showNextQuestion();
 
                 skip.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        skipStart++;
-                        if(skipStart<=skipLimit) {
-                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-                            ansDTOListItems.add(questionAnsDTOListItem);
-                            submitanswer(ansDTOListItems);
-                            ansDTOListItems.remove(questionAnsDTOListItem);
-                            counter++;
-                            showNextQuestion();
-//                            if((counter+1)%3!=0) {
-//                                QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-//                                questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-//                                ansDTOListItems.add(questionAnsDTOListItem);
-//                                counter++;
-//                                showNextQuestion();
-//                            }
-//                            else{
-//                                QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-//                                questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-//                                ansDTOListItems.add(questionAnsDTOListItem);
-//                                counter++;
-//                                callAdd();
-//                                showNextQuestion();
-//
-//                            }
+
+                        if(skipStart<skipLimit) {
+                            skipStart++;
+//                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+//                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+//                            ansDTOListItems.add(questionAnsDTOListItem);
+//                            submitanswer(ansDTOListItems);
+//                            ansDTOListItems.remove(questionAnsDTOListItem);
+//                            counter++;
+//                            showNextQuestion();
+                            if((counter+1)%3!=0) {
+                                QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+                                questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+                                ansDTOListItems.add(questionAnsDTOListItem);
+                                counter++;
+                                showNextQuestion();
+                            }
+                            else{
+                                QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+                                questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+                                ansDTOListItems.add(questionAnsDTOListItem);
+                                counter++;
+                                callAdd();
+                                showNextQuestion();
+
+                            }
                         }
                         else {
                             Toast.makeText(StaticQuizActivity.this,"Can't skip more than three questions",Toast.LENGTH_SHORT).show();
@@ -163,35 +176,39 @@ public class StaticQuizActivity extends AppCompatActivity {
                 next.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-                        questionAnsDTOListItem.setAnswer(answer.getText().toString());
-                        questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-                        questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
-                        ansDTOListItems.add(questionAnsDTOListItem);
-                        submitanswer(ansDTOListItems);
-                        ansDTOListItems.remove(questionAnsDTOListItem);
-                        counter++;
-                        showNextQuestion();
+//                        QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+//                        questionAnsDTOListItem.setAnswer(answer.getText().toString());
+//                        questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+//                        questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
+//                        ansDTOListItems.add(questionAnsDTOListItem);
+//                        submitanswer(ansDTOListItems);
+//                        ansDTOListItems.remove(questionAnsDTOListItem);
+//                        counter++;
+//                        showNextQuestion();
                         //save answer in answer dto
-//                        if((counter+1)%3!=0) {
-//                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-//                            questionAnsDTOListItem.setAnswer(answer.getText().toString());
-//                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-//                            questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
-//                            ansDTOListItems.add(questionAnsDTOListItem);
-//                            counter++;
-//                            showNextQuestion();
-//                        }
-//                        else {
-//                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
-//                            questionAnsDTOListItem.setAnswer(answer.getText().toString());
-//                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
-//                            questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
-//                            ansDTOListItems.add(questionAnsDTOListItem);
-//                            counter++;
-//                            callAdd();
-//                            showNextQuestion();
-//                        }
+                        if((counter+1)%3!=0) {
+                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+                            questionAnsDTOListItem.setAnswer(answer.getText().toString());
+                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+                            questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
+                            ansDTOListItems.add(questionAnsDTOListItem);
+                            if(check(answer.getText().toString(),questionDTOS.get(counter).getAnswers()))
+                                correctAnswers++;
+                            counter++;
+                            showNextQuestion();
+                        }
+                        else {
+                            QuestionAnsDTOListItem questionAnsDTOListItem = new QuestionAnsDTOListItem();
+                            questionAnsDTOListItem.setAnswer(answer.getText().toString());
+                            questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS - timeLeftInMillis);
+                            questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
+                            ansDTOListItems.add(questionAnsDTOListItem);
+                            if(check(answer.getText().toString(),questionDTOS.get(counter).getAnswers()))
+                                correctAnswers++;
+                            counter++;
+                            callAdd();
+                            showNextQuestion();
+                        }
 
                     }
                 });
@@ -207,20 +224,48 @@ public class StaticQuizActivity extends AppCompatActivity {
         });
     }
 
-    private void submitanswer(List<QuestionAnsDTOListItem> ansDTOListItems) {
+    private void submitanswer(final List<QuestionAnsDTOListItem> ansDTOListItems) {
 
-        APIInterface apiInterface=App2.getClient().create(APIInterface.class);
+        APIInterface apiInterface= App5.getClient().create(APIInterface.class);
         AnswerDTO answerDTO=new AnswerDTO();
         answerDTO.setQuestionAnsDTOList(ansDTOListItems);
         answerDTO.setContestId(intent.getStringExtra("contestId"));
+        answerDTO.setUserID(String.valueOf(sharedPreferences.getInt("userId",0)));
+        answerDTO.setNoOfskips(skipStart);
         apiInterface.submitAnswers(answerDTO).enqueue(new Callback<com.coviam.quizapp.pojo.Response>() {
             @Override
             public void onResponse(Call<com.coviam.quizapp.pojo.Response> call, Response<com.coviam.quizapp.pojo.Response> response) {
                 if(response.body().isStatus()){
-                    Toast.makeText(StaticQuizActivity.this,"success",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StaticQuizActivity.this,"success",Toast.LENGTH_LONG).show();
+                    APIInterface apiInterface1= App7.getClient().create(APIInterface.class);
+                    Analytics analytics=new Analytics();
+                    analytics.setAction("quiz");
+                    analytics.setUserId(String.valueOf(sharedPreferences.getInt("userId",0)));
+                    analytics.setContestId(intent.getStringExtra("contestId"));
+                    long time=0;
+                    for(int cnt=0;cnt<ansDTOListItems.size();cnt++){
+                        time+=ansDTOListItems.get(cnt).getTimetaken();
+
+                    }
+                    analytics.setContestTime(time);
+                    analytics.setContestName(contestName.toString());
+                    apiInterface1.analytics(analytics).enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            Toast.makeText(StaticQuizActivity.this,"analytics success",Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Toast.makeText(StaticQuizActivity.this,"analytics fail",Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+
+
                 }
                 else {
-                    Toast.makeText(StaticQuizActivity.this,"fail",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StaticQuizActivity.this,"questions not sub",Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -228,7 +273,7 @@ public class StaticQuizActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<com.coviam.quizapp.pojo.Response> call, Throwable t) {
 
-                Toast.makeText(StaticQuizActivity.this,"server error!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(StaticQuizActivity.this,"fuck!!",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -249,7 +294,12 @@ public class StaticQuizActivity extends AppCompatActivity {
         }
         else{
             //api call to send answer
-            Intent intent=new Intent(StaticQuizActivity.this,DummyActivity.class);
+             Toast.makeText(StaticQuizActivity.this,"quiz completed",Toast.LENGTH_SHORT).show();
+             Intent intent=new Intent(StaticQuizActivity.this,DummyActivity.class);
+            submitanswer(ansDTOListItems);
+            countDownTimer.cancel();
+            intent.putExtra("points",correctAnswers);
+            intent.putExtra("noOfQuestions",numberOfQuestions);
             startActivity(intent);
             finish();
         }
@@ -257,7 +307,7 @@ public class StaticQuizActivity extends AppCompatActivity {
 
     void views(){
         loadbar=findViewById(R.id.progressBar);
-        contestName=findViewById(R.id.contentName);
+        contestName=findViewById(R.id.contestName);
         qusetionName=findViewById(R.id.questionName);
         questionImage=findViewById(R.id.questionImage);
         questionView=findViewById(R.id.questionVideo);
@@ -291,8 +341,6 @@ public class StaticQuizActivity extends AppCompatActivity {
                 questionAnsDTOListItem.setTimetaken(COUNTDOWN_IN_MILLIS-timeLeftInMillis);
                 questionAnsDTOListItem.setQuestionId(questionDTOS.get(counter).getQuestionId());
                 ansDTOListItems.add(questionAnsDTOListItem);
-                submitanswer(ansDTOListItems);
-                ansDTOListItems.remove(questionAnsDTOListItem);
                 if(counter<numberOfQuestions) {
                     if((counter+1)%3!=0) {
                         counter++;
@@ -305,7 +353,12 @@ public class StaticQuizActivity extends AppCompatActivity {
                     }
                 }
                 else{
+                    Toast.makeText(StaticQuizActivity.this,"quiz completed",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(StaticQuizActivity.this,DummyActivity.class);
+
+                    submitanswer(ansDTOListItems);
+                    intent.putExtra("points",correctAnswers);
+                    intent.putExtra("noOfQuestions",numberOfQuestions);
                     startActivity(intent);
                     finish();
                 }
@@ -389,8 +442,18 @@ public class StaticQuizActivity extends AppCompatActivity {
     }
 
     void callAdd(){
-        Intent intent=new Intent(StaticQuizActivity.this,AdActivity.class);
-        startActivity(intent);
+//        Intent intent=new Intent(StaticQuizActivity.this,AdActivity.class);
+//        intent.putExtra("counter",counter+1);
+//        startActivity(intent);
+
+    }
+
+    Boolean check(String answer,String verAnswer){
+        if(answer.toUpperCase().equals(verAnswer.toUpperCase()))
+            return true;
+        else{
+            return false;
+        }
 
     }
 

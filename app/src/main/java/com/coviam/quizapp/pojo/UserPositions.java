@@ -4,11 +4,22 @@ import com.google.gson.annotations.SerializedName;
 
 public class UserPositions{
 
-	@SerializedName("userName")
+	@SerializedName("userId")
 	private String userName;
 
 	@SerializedName("points")
 	private int points;
+
+	@SerializedName("rank")
+	private int rank;
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
 
 	public void setUserName(String userName){
 		this.userName = userName;

@@ -1,7 +1,10 @@
 package com.coviam.quizapp.api;
 
+import com.coviam.quizapp.pojo.Analytics;
 import com.coviam.quizapp.pojo.AnswerDTO;
+import com.coviam.quizapp.pojo.LeaderBoardDetails;
 import com.coviam.quizapp.pojo.QuestionDTO;
+import com.coviam.quizapp.pojo.ReportCreate;
 import com.coviam.quizapp.pojo.Response;
 import com.coviam.quizapp.pojo.SubscribedResponse;
 import com.coviam.quizapp.pojo.UserPositions;
@@ -18,23 +21,36 @@ import retrofit2.http.Path;
 
 public interface APIInterface {
 
-    @GET("/home/getContest/subscribe/{userId}")
+    @GET("contest/getFinishedContestOfAUser/{userId}")
+    Call<List<SubscribedResponse>> getleaderboard(@Path("userId") String userId);
+
+    @GET("contest/getContestsOfAUser/{userId}")
     Call<List<SubscribedResponse>> getSubscribedContent(@Path("userId") String userId);
 
     @GET("/home/{userId}")
     Call<List<SubscribedResponse>> getLeaderboardContent(@Path("userId") String userId);
 
-    @GET("/home/{contentId}")
-    Call<List<UserPositions>> getLeaderboardPosition(@Path("contentId") String contentId);
+    @POST("/reportStatus/static")
+    Call<ResponseBody> reportCreate(@Body ReportCreate reportCreate);
+
+    @POST("/report/static/user/get")
+    Call<List<UserPositions>> getLeaderboardPosition(@Body LeaderBoardDetails leaderBoardDetails);
 
     /*@GET("/contest/{contestId")
     Call<List<QuestionDTO>> getQuestions(@Path("contestId") String contestId);
      */
-    @GET("/bins/158zoq")
-    Call<List<QuestionDTO>> getQuestions();
+    @GET("contest/getContest/{contestId}")
+    Call<List<QuestionDTO>> getQuestions(@Path("contestId") String contestId);
 
-    @POST("/contset/static/submit")
+//    @GET("/bins/jm1bq")
+//    Call<List<QuestionDTO>> getQuestions();
+
+    @POST("/myContest/static/submit")
     Call<Response> submitAnswers(@Body AnswerDTO answerDTO);
+
+
+    @POST("/search/saveQuizData")
+    Call<ResponseBody> analytics(@Body Analytics analytics);
 
 
 }
